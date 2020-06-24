@@ -8,6 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+
 public class RegistryHandler 
 {
 	
@@ -19,7 +20,6 @@ public class RegistryHandler
 	}
 	
 	//Items
-	public static final RegistryObject<Item> METEORITE = ITEMS.register( "meteorite", ItemBase::new );
+	public static final RegistryObject<Item> METEORITE = ITEMS.register("meteorite", ItemBase::new);
 
-	
 }
