@@ -30,7 +30,6 @@ public class lol
     
     public static final String MOD_ID = "lol";
   
-    
     public lol() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
