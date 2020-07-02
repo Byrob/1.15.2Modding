@@ -3,6 +3,8 @@ package com.example.examplemod;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -57,6 +59,15 @@ public class lol
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
+    
+    public static final ItemGroup TAB = new ItemGroup("lolTab") {
+    	
+    	@Override
+    	public ItemStack createIcon() {
+    		
+    		return new ItemStack(RegistryHandler.METEORITE.get());
+    	}
+    };
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
