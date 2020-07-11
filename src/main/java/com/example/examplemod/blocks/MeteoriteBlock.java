@@ -13,7 +13,7 @@ public class MeteoriteBlock extends Block
 				.hardnessAndResistance(5.0f, 6.0f)
 				.sound(SoundType.METAL)
 				.harvestLevel(3)
-				.harbestTool(ToolType.PICKAXE));
+				.harvestTool(ToolType.PICKAXE));
 	}
 
 }
