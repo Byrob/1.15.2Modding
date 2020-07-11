@@ -2,7 +2,7 @@ package com.example.examplemod;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
+import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -32,7 +32,8 @@ public class lol
     
     public static final String MOD_ID = "lol";
   
-    public lol() {
+    public lol() 
+    {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -55,16 +56,17 @@ public class lol
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event) {
+    private void doClientStuff(final FMLClientSetupEvent event) 
+    {
         // do something that can only be done on the client
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+        Minecraft minecraft = event.getMinecraftSupplier().get();
+		LOGGER.info("Got game settings {}", minecraft.gameSettings);
     }
     
-    public static final ItemGroup TAB = new ItemGroup("lolTab") {
-    	
+    public static final ItemGroup TAB = new ItemGroup("lolTab") 
+    {    	
     	@Override
     	public ItemStack createIcon() {
-    		
     		return new ItemStack(RegistryHandler.METEORITE.get());
     	}
     };
